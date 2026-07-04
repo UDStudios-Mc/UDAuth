@@ -1,0 +1,5 @@
+dev\underground\udauth\DataStore.class
+dev\underground\udauth\UDAuthPlugin.class
+dev\underground\udauth\AuthListener.class
+dev\underground\udauth\PasswordHasher.class
+dev\underground\udauth\FastLoginHook.class

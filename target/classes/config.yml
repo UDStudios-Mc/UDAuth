@@ -1,0 +1,64 @@
+# A premium bypass is only safe when a bridge such as FastLogin authenticates
+# premium accounts and assigns their real (UUID v4) UUID. UDAuth never trusts
+# a username-only web lookup, because cracked players can spoof those names.
+premium-bypass:
+  enabled: true
+  require-fastlogin: true
+
+# Security settings (these are not messages).
+security:
+  password-min-length: 6
+  password-max-length: 128
+  pbkdf2-iterations: 210000
+  max-login-attempts: 5
+  login-timeout-seconds: 90
+
+# Every chat and kick message can be changed here.
+# Use & color codes. Available placeholders are shown beside each message.
+messages:
+  prefix: "&8[&bUDAuth&8] &7"
+
+  # Authentication prompts and success messages
+  login: "Please log in with &f/login <password>&7."
+  register: "Please register with &f/register <password> <repeat>&7."
+  success-login: "&aYou are now logged in."
+  success-register: "&aYour account has been registered."
+
+  # Premium account messages
+  premium-bypass: "&aPremium account verified; login bypassed."
+
+  # Password and account messages
+  wrong-password: "&cIncorrect password. Attempts remaining: %attempts%"
+  passwords-differ: "&cThose passwords do not match."
+  password-length: "&cYour password must contain %min% to %max% characters."
+  already-authenticated: "&cYou are already authenticated."
+  already-registered: "&cThis account is already registered. Use /login."
+  not-registered: "&cThis account is not registered. Use /register."
+  authenticating: "&eChecking your credentials..."
+  account-save-error: "&cYour account could not be saved. Please contact an administrator."
+
+  # Command messages
+  usage-login: "&cUsage: /login <password>"
+  usage-register: "&cUsage: /register <password> <repeat>"
+  players-only: "&cThis command can only be used by a player."
+  no-permission: "&cYou do not have permission."
+
+  # Spawn setup messages
+  setup-start: "&aAuthentication waiting spawn set."
+  setup-end: "&aPost-authentication spawn set."
+  spawn-missing: "&eAn authentication spawn has not been configured yet."
+
+  # Kick-screen messages (the prefix is not added)
+  kicked-attempts: "Too many failed login attempts."
+  kicked-timeout: "You took too long to authenticate."
+
+# Full-screen authentication prompts. Use & color codes.
+titles:
+  register: "&b&lPlease Register"
+  register-subtitle: "&f/register [password] [repeat]"
+  login: "&b&lPlease Login"
+  login-subtitle: "&f/login [password]"
+  fade-in-ticks: 10
+  stay-ticks: 45
+  fade-out-ticks: 10
+  repeat-every-ticks: 60

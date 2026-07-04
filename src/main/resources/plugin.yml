@@ -1,0 +1,26 @@
+name: UDAuth
+version: '${project.version}'
+main: dev.underground.udauth.UDAuthPlugin
+api-version: '1.20'
+authors: [Underground]
+description: Secure authentication for offline-mode Paper servers.
+softdepend: [FastLogin]
+commands:
+  login:
+    description: Log in to your account.
+    usage: /login <password>
+    aliases: [l]
+  register:
+    description: Register your account.
+    usage: /register <password> <repeat>
+    aliases: [reg]
+  authspawnstart:
+    description: Set the location players wait at before authentication.
+    permission: udauth.admin
+  authspawnend:
+    description: Set the destination used after successful authentication.
+    permission: udauth.admin
+permissions:
+  udauth.admin:
+    description: Allows management of UDAuth spawn points.
+    default: op
